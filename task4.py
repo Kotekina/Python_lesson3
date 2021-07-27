@@ -6,6 +6,24 @@
 # Первый — возведение в степень с помощью оператора **.
 # Второй — более сложная реализация без оператора **, предусматривающая использование цикла.
 
+# Варианта 1:
 def my_func(x, y):
     return 1/x**abs(y)
 print(my_func(2, -1))
+
+# Варианта 2:
+def my_func2(x, y):
+    if y > 0:
+        return
+    elif y == 0:
+        return 1
+    elif x <= 0:
+        return
+    else:
+        x_pow_y = 1
+        while y < 0:
+            x_pow_y *=1/x
+            y += 1
+        return  x_pow_y
+result = my_func2(2, -1)
+print(result)
